@@ -16,7 +16,7 @@ const DB_PASSWORD = process.env.DB_PASSWORD
 const DB_USER = process.env.DB_USER
 
 
-app.use(cors)
+app.use(cors())
 app.use(express.json())
 app.use(express.static('uploads'))
 
