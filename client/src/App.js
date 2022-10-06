@@ -1,24 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { loadGoodsList } from './store/goodsReducer'
 
 function App() {
+  const dispatch = useDispatch()
+  const data = useSelector((state) => state.goods.entities)
+  console.log(data);
+  useEffect(() => { dispatch(loadGoodsList()) }, [dispatch])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="App"> {data && data.map(item => (<p key={item._id}>{item.title}</p>))}</div>
   );
 }
 
