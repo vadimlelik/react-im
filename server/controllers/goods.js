@@ -1,7 +1,7 @@
-import Goods from '../models/goods.model.js'
+const Goods = require('../models/goods.model.js')
 
 
-export const getAllGoods = async (req, res) => {
+const getAllGoods = async (req, res) => {
 	try {
 		const goods = await Goods.find()
 		if (!goods) {
@@ -14,7 +14,7 @@ export const getAllGoods = async (req, res) => {
 	}
 }
 
-export const createGoods = async (req, res) => {
+const createGoods = async (req, res) => {
 	try {
 		const { title, price } = req.body
 		const goods = new Goods({
@@ -26,3 +26,5 @@ export const createGoods = async (req, res) => {
 
 	}
 }
+
+module.exports = { getAllGoods, createGoods }

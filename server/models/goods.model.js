@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
 const { Schema, model } = mongoose
 
@@ -15,7 +15,13 @@ const GoodsSchema = new Schema({
 		type: Schema.Types.ObjectId,
 		ref: 'User'
 	}
-})
+},
+	{
+		timestamps: true,
+	}
+)
 
 
-export default model('Goods', GoodsSchema)
+
+
+module.exports = model('Goods', GoodsSchema)
