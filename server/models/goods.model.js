@@ -11,9 +11,17 @@ const GoodsSchema = new Schema({
 		type: Number,
 		required: true
 	},
-	userId: {
-		type: Schema.Types.ObjectId,
-		ref: 'User'
+	description: {
+		type: String
+	},
+	category: {
+		type: String
+	},
+	image: {
+		type: String
+	},
+	raiting: {
+		type: String
 	}
 },
 	{

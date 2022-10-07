@@ -1,0 +1,92 @@
+[
+	{
+		"id": 1,
+		"email": "john@gmail.com",
+		"username": "johnd",
+		"password": "m38rmF$",
+		"name": "john",
+		"phone": "1-570-236-7033",
+		"address": "6340388602fb02fe15912b90"
+	},
+	{
+		"id": 2,
+		"email": "morrison@gmail.com",
+		"username": "mor_2314",
+		"password": "83r5^_",
+		"name": "david",
+		"phone": "1-570-236-7033",
+		"address": "6340388602fb02fe15912b8d"
+	},
+	{
+		"id": 3,
+		"email": "kevin@gmail.com",
+		"username": "kevinryan",
+		"password": "kev02937@",
+		"name": "kevin",
+		"phone": "1-567-094-1345",
+		"address": "6340388602fb02fe15912b91"
+	},
+	{
+		"id": 4,
+		"email": "don@gmail.com",
+		"username": "donero",
+		"password": "ewedon",
+		"name": "don",
+		"phone": "1-765-789-6734",
+		"address": "6340388602fb02fe15912b8f"
+	},
+	{
+		"id": 5,
+		"email": "derek@gmail.com",
+		"username": "derek",
+		"password": "jklg*_56",
+		"name": "derek",
+		"phone": "1-956-001-1945",
+		"address": "6340388602fb02fe15912b8c"
+	},
+	{
+		"id": 6,
+		"email": "david_r@gmail.com",
+		"username": "david_r",
+		"password": "3478*#54",
+		"name": "david",
+		"phone": "1-678-345-9856",
+		"address": "6340388602fb02fe15912b92"
+	},
+	{
+		"id": 7,
+		"email": "miriam@gmail.com",
+		"username": "snyder",
+		"password": "f238&@*$",
+		"name": "miriam",
+		"phone": "1-123-943-0563",
+		"address": "6340388602fb02fe15912b8e"
+	},
+	{
+		"id": 8,
+		"email": "william@gmail.com",
+		"username": "hopkins",
+		"password": "William56$hj",
+		"name": "william",
+		"phone": "1-478-001-0890",
+		"addres": "6340388602fb02fe15912b95"
+	},
+	{
+		"id": 9,
+		"email": "kate@gmail.com",
+		"username": "kate_h",
+		"password": "kfejk@*_",
+		"name": "kate",
+		"phone": "1-678-456-1934",
+		"address": "6340388602fb02fe15912b94"
+	},
+	{
+		"id": 10,
+		"email": "jimmie@gmail.com",
+		"username": "jimmie_k",
+		"password": "klein*#%*",
+		"name": "jimmie",
+		"phone": "1-104-001-4567",
+		"address": "6340388602fb02fe15912b93"
+	}
+]
