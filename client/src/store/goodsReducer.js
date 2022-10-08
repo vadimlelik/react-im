@@ -1,5 +1,6 @@
 import { createAction, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
+import goodsService from '../services/good.service'
 
 
 const initialState = {
@@ -35,7 +36,7 @@ export const loadGoodsList = () => async (dispatch) => {
 	dispatch(goodsRequested())
 
 	try {
-		const { data } = await axios.get('http://localhost:3002/api/goods')
+		const data = await goodsService.get()
 		dispatch(goodsRecived(data))
 
 	} catch (error) {

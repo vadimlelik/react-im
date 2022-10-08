@@ -19,21 +19,12 @@ async function setInitialData() {
 	if (goods.length < goodsMock.length) {
 		await createInitialEntity(GoodsModel, goodsMock)
 	}
-	if (users.length < userMock.length) {
-		await createInitialEntity(UserModel, userMock)
-	}
-	if (adress.length < addressMock.length) {
-		await createInitialEntity(AddresModel, addressMock)
-	}
-
 }
 
 async function createInitialEntity(Model, data) {
 	await Model.collection.drop()
 	return Promise.all(
 		data.map(async (item) => {
-
-			// console.log(item);
 			try {
 				const exm = await Model.find({
 					name: example.name,
