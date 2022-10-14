@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const { getAllGoods } = require('../controllers/goods.js')
+const { getAllGoods, createGoods } = require('../controllers/goods.js')
 
 
 const router = new Router()
@@ -11,5 +11,6 @@ const router = new Router()
 
 // get all goods
 router.get('/', getAllGoods)
+router.post('/', createGoods)
 
 module.exports = router

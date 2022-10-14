@@ -5,6 +5,7 @@ const dotenv = require('dotenv')
 const cors = require("cors")
 const goodsRoute = require('./routes/goods.js')
 
+
 const { setInitialData } = require('./start/initDataBase')
 
 

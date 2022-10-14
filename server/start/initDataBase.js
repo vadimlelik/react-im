@@ -1,20 +1,10 @@
 
 const goodsMock = require('../mock/goods.json')
-const addressMock = require('../mock/address.json')
-const userMock = require('../mock/users.json')
-
-
-
-
 const GoodsModel = require('../models/goods.model')
-const UserModel = require('../models/user.models')
-const AddresModel = require('../models/addres.model')
 
 async function setInitialData() {
 
 	const goods = await GoodsModel.find()
-	const users = await UserModel.find()
-	const adress = await AddresModel.find()
 
 	if (goods.length < goodsMock.length) {
 		await createInitialEntity(GoodsModel, goodsMock)
