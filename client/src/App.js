@@ -24,10 +24,10 @@ function App() {
           <Route path='new-goods' element={<h1>NewGoods</h1>} />
         </Route>
         <Route path='auth' element={<AuthLayout />} >
-          {/* <Route index element={<Navigate to={'auth/signUp'} />} /> */}
+          <Route index element={<Navigate to={'auth/signUp'} />} />
           <Route path='login' element={<LoginPage />} />
-          {/* <Route path='signUp' element={<SignUpPage />} /> */}
-          {/* <Route path='*' element={<Navigate to={'auth/signUp'} />} /> */}
+          <Route path='signUp' element={<SignUpPage />} />
+          <Route path='*' element={<Navigate to={'/auth/signUp'} />} />
         </Route >
 
       </Routes>
