@@ -10,6 +10,7 @@ import GoodsPage from './page/GoodsPage/GoodsPage';
 import AuthLayout from './Layouts/AuthLayout/AuthLayout';
 import LoginPage from './page/LoginPage/LoginPage';
 import SignUpPage from './page/SignUpPage/SignUpPage';
+import AddGoods from './components/AddGoods/AddGoods';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route index element={<Goodlist />} />
           <Route path=':goodId' element={<GoodsPage />} />
           <Route path='edit' element={<h1>EditGoods</h1>} />
-          <Route path='new-goods' element={<h1>NewGoods</h1>} />
+          <Route path='create-goods' element={<AddGoods />} />
         </Route>
         <Route path='auth' element={<AuthLayout />} >
           <Route index element={<Navigate to={'auth/signUp'} />} />

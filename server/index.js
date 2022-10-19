@@ -3,7 +3,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const cors = require("cors")
-const goodsRoute = require('./routes/goods.js')
+const goodsRoute = require('./routes/goods.router.js')
 
 
 const { setInitialData } = require('./start/initDataBase')
@@ -24,8 +24,6 @@ app.use(express.static('uploads'))
 // routes
 
 app.use('/api/goods', goodsRoute)
-
-
 
 const start = async () => {
 	const db = mongoose.connection;

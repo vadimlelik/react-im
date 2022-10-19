@@ -8,7 +8,8 @@ const http = axios.create({
 
 
 const httpServices = {
-	get: http.get
+	get: http.get,
+	post: http.post,
 }
 
 

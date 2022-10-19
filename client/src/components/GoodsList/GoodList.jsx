@@ -8,7 +8,7 @@ import "../GoodsList/goodsList.css";
 const GoodList = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.goods.entities);
-
+  console.log(data);
   useEffect(() => {
     dispatch(loadGoodsList());
   }, [dispatch]);

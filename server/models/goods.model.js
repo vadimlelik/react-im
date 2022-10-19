@@ -17,12 +17,12 @@ const GoodsSchema = new Schema({
 	category: {
 		type: String
 	},
-	image: {
-		type: String
-	},
-	raiting: {
-		type: String
-	}
+	// image: {
+	// 	type: String
+	// },
+	// raiting: {
+	// 	type: String
+	// }
 },
 	{
 		timestamps: true,

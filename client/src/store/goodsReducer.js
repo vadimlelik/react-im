@@ -23,12 +23,19 @@ const goodsSlice = createSlice({
 		goodsRequsetFaild: (state, action) => {
 			state.error = action.payload
 			state.isLoading = false
+		},
+		goodCreate: (state, action) => {
+			if (!Array.isArray(state.entities)) {
+				state.entities = [];
+			}
+			console.log(action, 'action');
+			state.entities.push(action.payload)
 		}
 	}
 })
 
 const { reducer: goodsReducer, actions } = goodsSlice
-const { goodsRequested, goodsRecived, goodsRequsetFaild } = actions
+const { goodsRequested, goodsRecived, goodsRequsetFaild, goodCreate } = actions
 
 
 export const loadGoodsList = () => async (dispatch) => {
@@ -42,6 +49,19 @@ export const loadGoodsList = () => async (dispatch) => {
 	} catch (error) {
 		dispatch(goodsRequsetFaild(error.message))
 	}
+}
+
+export const createGoods = (payload) => async (dispatch) => {
+	console.log(payload, 'payload');
+	try {
+		const { goods } = await goodsService.createGoods(payload)
+		console.log(goods);
+		dispatch(goodCreate(goods))
+
+	} catch (error) {
+		console.log(error);
+	}
+
 }
 
 

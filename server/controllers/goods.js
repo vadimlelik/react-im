@@ -2,6 +2,8 @@ const Goods = require('../models/goods.model.js')
 
 
 const getAllGoods = async (req, res) => {
+	const page = req.query.page
+	console.log(page);
 	try {
 		const goods = await Goods.find()
 		if (!goods) {
@@ -16,12 +18,13 @@ const getAllGoods = async (req, res) => {
 
 const createGoods = async (req, res) => {
 	try {
-		const { title, price } = req.body
+
 		const goods = new Goods({
-			title, price,
-			userId: req.user
+			...req.body
 		})
 		await goods.save()
+
+		return res.json({ goods })
 	} catch (error) {
 
 	}

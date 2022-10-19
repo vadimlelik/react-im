@@ -1,7 +1,5 @@
 const { Router } = require('express')
 const { getAllGoods, createGoods } = require('../controllers/goods.js')
-
-
 const router = new Router()
 
 
@@ -11,6 +9,6 @@ const router = new Router()
 
 // get all goods
 router.get('/', getAllGoods)
-router.post('/', createGoods)
+router.post('/create-goods', createGoods)
 
 module.exports = router
